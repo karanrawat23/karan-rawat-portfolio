@@ -136,6 +136,7 @@ a { text-decoration: none; color: inherit; }
 
 .nav.scrolled {
   background: rgba(10,10,15,.85);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 var(--border);
 }
@@ -242,6 +243,7 @@ a { text-decoration: none; color: inherit; }
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
   pointer-events: none;
 }
@@ -1079,6 +1081,7 @@ body {
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 999px;
   background: rgba(8, 18, 31, .58);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
   backdrop-filter: blur(20px) saturate(150%);
   box-shadow: 0 12px 40px rgba(2,10,20,.22);
 }
@@ -1106,6 +1109,7 @@ body {
 .resume-banner,
 .contact__form,
 .hero-card--profile {
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
 }
 
@@ -1124,6 +1128,7 @@ body {
 .hero__grid-bg {
   opacity: .58;
   background-size: 54px 54px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 78% at 50% 40%, black, transparent);
   mask-image: radial-gradient(ellipse 75% 78% at 50% 40%, black, transparent);
 }
 
