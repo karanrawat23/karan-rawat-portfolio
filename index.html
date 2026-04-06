@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Rawat | Tech Recruiter and Aspiring AI Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+</head>
+
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">KR<span class="dot">.</span></a>
+
+    <ul class="nav__links">
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#skills" class="nav__link">Skills</a></li>
+      <li><a href="#projects" class="nav__link">Projects</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="ph-bold ph-sun" id="iconSun"></i>
+        <i class="ph-bold ph-moon" id="iconMoon"></i>
+      </button>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="hero" id="hero">
+    <div class="hero__grid-bg"></div>
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+
+    <div class="hero__content">
+      <div class="hero__badge reveal">
+        <span class="badge__dot"></span>
+        Open to recruiter, tech, and growth opportunities
+      </div>
+
+      <h1 class="hero__name reveal reveal--delay-1">
+        <span class="hero__greeting">Hello, I'm</span>
+        <span class="hero__first">Karan</span>
+        <span class="hero__last">Rawat<span class="accent">.</span></span>
+      </h1>
+
+      <p class="hero__tagline reveal reveal--delay-2">
+        Learning through
+        <span class="typed-wrap">
+          <span class="typed" id="typed"></span>
+          <span class="typed-cursor">|</span>
+        </span>
+      </p>
+
+      <p class="hero__sub reveal reveal--delay-3">
+        BCA Student at Graphic Era Hill University &nbsp;|&nbsp; Tech Recruiter background &nbsp;|&nbsp; Mathura, India
+      </p>
+
+      <div class="hero__cta reveal reveal--delay-4">
+        <a href="#projects" class="btn btn--primary">See Real Projects</a>
+        <a href="https://github.com/karanrawat23" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Open GitHub</a>
+      </div>
+
+      <div class="scroll-hint reveal reveal--delay-4">
+        <span>Scroll</span>
+        <div class="scroll-line"><div class="scroll-ball"></div></div>
+      </div>
+    </div>
+
+    <div class="hero__card reveal reveal--delay-3">
+      <div class="hero-card hero-card--profile">
+        <div class="hero-card__portrait">
+          <img
+            class="hero-card__photo"
+            src="https://avatars.githubusercontent.com/u/181270000?v=4"
+            alt="Portrait of Karan Rawat"
+          />
+        </div>
+        <div class="hero-card__top hero-card__top--stacked">
+          <div>
+            <p class="hero-card__eyebrow">Current Snapshot</p>
+            <p class="hero-card__name">Karan Rawat</p>
+            <p class="hero-card__role">Tech Recruiter and aspiring AI-first builder</p>
+          </div>
+        </div>
+        <p class="hero-card__summary">
+          I like technology that feels useful in the real world. Right now I am learning by building frontend projects, sharpening communication through recruiting experience, and moving closer to data, AI, and product-focused work.
+        </p>
+        <div class="hero-card__tags">
+          <span class="tag">Tech Hiring</span>
+          <span class="tag">Frontend</span>
+          <span class="tag">Vanilla JS</span>
+          <span class="tag">AI Journey</span>
+        </div>
+        <div class="hero-card__stat">
+          <div class="stat-item">
+            <span class="stat-num">2+</span>
+            <span class="stat-label">Public Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Latest Role</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">24/7</span>
+            <span class="stat-label">Learning Mode</span>
+          </div>
+        </div>
+        <div class="hero-card__links">
+          <a href="#about">Story</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-num">01</span>
+        <span>About Me</span>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text">
+          <h2 class="section-heading reveal">
+            Building a path through <em>people, products,</em><br />and practical tech
+          </h2>
+          <p class="reveal reveal--delay-1">
+            I'm Karan Rawat, a BCA student at Graphic Era Hill University with a strong interest in technology, product thinking, and the kind of work that creates clear user value. I learn best by shipping, refining, and understanding how ideas become real experiences.
+          </p>
+          <p class="reveal reveal--delay-2">
+            My background is not only about code. Working close to hiring and communication has helped me understand people, roles, and how teams actually work. That perspective now shapes how I approach projects, growth, and the direction I want to take in AI and tech.
+          </p>
+
+          <div class="timeline reveal reveal--delay-3">
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__body">
+                <span class="timeline__date">2024</span>
+                <h4 class="timeline__title">Data Annotator Trainee</h4>
+                <p class="timeline__desc">Worked with AI data workflows, labeling tasks, and quality-focused thinking that helped me better understand how intelligent systems are supported behind the scenes.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__body">
+                <span class="timeline__date">Latest Role</span>
+                <h4 class="timeline__title">Tech Recruiter at Talentiqo</h4>
+                <p class="timeline__desc">Handled sourcing, outreach, and candidate communication while staying close to technical hiring requirements and the pace of real product teams.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__body">
+                <span class="timeline__date">2023-Present</span>
+                <h4 class="timeline__title">BCA at Graphic Era Hill University</h4>
+                <p class="timeline__desc">Growing my base in programming, problem solving, and computer fundamentals while building confidence through hands-on project work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__cards">
+          <div class="info-card reveal reveal--delay-1">
+            <i class="ph-bold ph-graduation-cap info-card__icon"></i>
+            <h4>Education</h4>
+            <p>Bachelor of Computer Applications<br /><strong>Graphic Era Hill University</strong></p>
+          </div>
+          <div class="info-card reveal reveal--delay-2">
+            <i class="ph-bold ph-target info-card__icon"></i>
+            <h4>Current Focus</h4>
+            <p>Frontend projects, practical learning<br /><strong>AI and product growth</strong></p>
+          </div>
+          <div class="info-card reveal reveal--delay-3">
+            <i class="ph-bold ph-map-pin info-card__icon"></i>
+            <h4>Location</h4>
+            <p>Mathura, Uttar Pradesh<br /><strong>India</strong></p>
+          </div>
+          <div class="info-card reveal reveal--delay-4">
+            <i class="ph-bold ph-heart info-card__icon"></i>
+            <h4>Strengths</h4>
+            <p>Communication, consistency, curiosity<br /><strong>Execution mindset</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-num">02</span>
+        <span>Skills</span>
+      </div>
+
+      <h2 class="section-heading reveal">My toolkit and <em>growth areas</em></h2>
+
+      <div class="skills__grid">
+        <div class="skills__bars">
+          <div class="skill-bar reveal">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name"><i class="ph-bold ph-file-c"></i> C Programming</span>
+              <span class="skill-bar__pct">72%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="72"></div></div>
+          </div>
+
+          <div class="skill-bar reveal reveal--delay-1">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name"><i class="ph-bold ph-code"></i> HTML and CSS</span>
+              <span class="skill-bar__pct">74%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="74"></div></div>
+          </div>
+
+          <div class="skill-bar reveal reveal--delay-2">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name"><i class="ph-bold ph-lightning"></i> JavaScript</span>
+              <span class="skill-bar__pct">52%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="52"></div></div>
+          </div>
+
+          <div class="skill-bar reveal reveal--delay-3">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name"><i class="ph-bold ph-snake-logo"></i> Python</span>
+              <span class="skill-bar__pct">45%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="45"></div></div>
+          </div>
+
+          <div class="skill-bar reveal reveal--delay-4">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name"><i class="ph-bold ph-users-three"></i> Communication</span>
+              <span class="skill-bar__pct">84%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="84"></div></div>
+          </div>
+
+          <div class="skill-bar reveal reveal--delay-5">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name"><i class="ph-bold ph-briefcase"></i> Tech Recruiting</span>
+              <span class="skill-bar__pct">78%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="78"></div></div>
+          </div>
+        </div>
+
+        <div class="skills__icons">
+          <div class="tech-card reveal">
+            <i class="ph-bold ph-file-c tech-card__icon"></i>
+            <span>C Language</span>
+          </div>
+          <div class="tech-card reveal reveal--delay-1">
+            <i class="ph-bold ph-code-block tech-card__icon"></i>
+            <span>HTML and CSS</span>
+          </div>
+          <div class="tech-card reveal reveal--delay-2">
+            <i class="ph-bold ph-lightning tech-card__icon"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-card reveal reveal--delay-3">
+            <i class="ph-bold ph-snake-logo tech-card__icon"></i>
+            <span>Python</span>
+          </div>
+          <div class="tech-card reveal reveal--delay-4">
+            <i class="ph-bold ph-users-three tech-card__icon"></i>
+            <span>Communication</span>
+          </div>
+          <div class="tech-card reveal reveal--delay-5">
+            <i class="ph-bold ph-magnifying-glass tech-card__icon"></i>
+            <span>Sourcing</span>
+          </div>
+          <div class="tech-card reveal reveal--delay-1">
+            <i class="ph-bold ph-robot tech-card__icon"></i>
+            <span>AI Curiosity</span>
+          </div>
+          <div class="tech-card reveal reveal--delay-2">
+            <i class="ph-bold ph-tree-structure tech-card__icon"></i>
+            <span>Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-num">03</span>
+        <span>Projects</span>
+      </div>
+
+      <h2 class="section-heading reveal">Real projects from my <em>GitHub</em></h2>
+
+      <div class="projects__grid">
+        <article class="project-card project-card--featured reveal">
+          <div class="project-card__glow"></div>
+          <div class="project-card__header">
+            <div class="project-card__num">01</div>
+            <div class="project-card__status status--active">Featured Build</div>
+          </div>
+          <p class="project-card__eyebrow">Frontend airline management demo</p>
+          <h3 class="project-card__title">SkyBridgeAMS</h3>
+          <p class="project-card__desc">
+            A front-end airline management system demo built with HTML, CSS, and vanilla JavaScript. It includes passenger signup, login, flight discovery, booking history, admin-side route management, and browser-based persistence through localStorage.
+          </p>
+          <div class="project-card__progress">
+            <div class="progress-label">
+              <span>What it shows</span>
+              <span>UI plus browser logic</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 92%"></div>
+            </div>
+          </div>
+          <div class="project-card__tags">
+            <span class="tag tag--tech">HTML5</span>
+            <span class="tag tag--tech">CSS3</span>
+            <span class="tag tag--tech">Vanilla JavaScript</span>
+            <span class="tag tag--tech">localStorage</span>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/karanrawat23/SkyBridgeAMS" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="ph-bold ph-github-logo"></i> View Repository
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal--delay-2">
+          <div class="project-card__header">
+            <div class="project-card__num">02</div>
+            <div class="project-card__status status--planning">Static UI Build</div>
+          </div>
+          <p class="project-card__eyebrow">Simple visual commerce concept</p>
+          <h3 class="project-card__title">Thrift Swadeshi</h3>
+          <p class="project-card__desc">
+            A small thrift-store website demo focused on clean layout, product presentation, and lightweight browsing. It reflects my hands-on approach to frontend experimentation and turning ideas into polished static experiences.
+          </p>
+          <div class="project-card__vision">
+            <i class="ph-bold ph-sparkle"></i>
+            <span>Simple, visual, practical frontend execution</span>
+          </div>
+          <div class="project-card__tags">
+            <span class="tag tag--tech">HTML</span>
+            <span class="tag tag--tech">CSS</span>
+            <span class="tag tag--tech">JavaScript</span>
+            <span class="tag tag--tech">Storefront UI</span>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/karanrawat23/thrift-swadeshi" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="ph-bold ph-github-logo"></i> View Repository
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume-section section" id="resume">
+    <div class="container">
+      <div class="resume-banner reveal">
+        <div class="resume-banner__text">
+          <h2>Want the full picture?</h2>
+          <p>Explore my public GitHub to see the work I am actually building and improving.</p>
+        </div>
+        <a href="https://github.com/karanrawat23" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+          <i class="ph-bold ph-github-logo"></i>
+          Explore GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="section-num">04</span>
+        <span>Contact</span>
+      </div>
+
+      <h2 class="section-heading reveal">Let's <em>connect</em></h2>
+
+      <div class="contact__grid">
+        <div class="contact__left reveal">
+          <p class="contact__intro">
+            I am open to opportunities, collaborations, and meaningful conversations around tech, growth, recruiting, and building better digital experiences.
+          </p>
+
+          <div class="contact__methods">
+            <a href="mailto:karanrawatxlk@gmail.com" class="contact-method">
+              <div class="contact-method__icon"><i class="ph-bold ph-envelope"></i></div>
+              <div>
+                <span class="contact-method__label">Email</span>
+                <span class="contact-method__val">karanrawatxlk@gmail.com</span>
+              </div>
+              <i class="ph-bold ph-arrow-up-right contact-method__arrow"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/karan-rawat-515151281/" target="_blank" rel="noopener noreferrer" class="contact-method">
+              <div class="contact-method__icon"><i class="ph-bold ph-linkedin-logo"></i></div>
+              <div>
+                <span class="contact-method__label">LinkedIn</span>
+                <span class="contact-method__val">linkedin.com/in/karan-rawat-515151281</span>
+              </div>
+              <i class="ph-bold ph-arrow-up-right contact-method__arrow"></i>
+            </a>
+
+            <a href="https://github.com/karanrawat23" target="_blank" rel="noopener noreferrer" class="contact-method">
+              <div class="contact-method__icon"><i class="ph-bold ph-github-logo"></i></div>
+              <div>
+                <span class="contact-method__label">GitHub</span>
+                <span class="contact-method__val">github.com/karanrawat23</span>
+              </div>
+              <i class="ph-bold ph-arrow-up-right contact-method__arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__form reveal reveal--delay-2" id="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Alex Johnson" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="alex@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Hey Karan, I would love to connect about..."></textarea>
+          </div>
+          <button class="btn btn--primary btn--full" id="sendBtn">
+            <i class="ph-bold ph-paper-plane-tilt"></i>
+            Send Message
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">KR<span class="accent">.</span></span>
+      <p class="footer__copy">&copy; <span id="currentYear">2026</span> Karan Rawat | Built with intent and vanilla code</p>
+      <div class="footer__socials">
+        <a href="https://github.com/karanrawat23" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ph-bold ph-github-logo"></i></a>
+        <a href="https://www.linkedin.com/in/karan-rawat-a9aba91a8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
+        <a href="mailto:karanrawatxlk@gmail.com" aria-label="Email"><i class="ph-bold ph-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <script src="backend.js"></script>
+</body>
+</html>
