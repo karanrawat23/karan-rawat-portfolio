@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karan Rawat | Tech Recruiter and Aspiring AI Builder</title>
+  <title>Karan Rawat | Frontend Learner and Aspiring AI Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
 </head>
 
@@ -16,7 +16,10 @@
   <div class="cursor-follower" id="cursorFollower"></div>
 
   <nav class="nav" id="nav">
-    <a href="#hero" class="nav__logo">KR<span class="dot">.</span></a>
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-main">Karan Rawat</span>
+      <span class="nav__logo-sub">Portfolio</span>
+    </a>
 
     <ul class="nav__links">
       <li><a href="#about" class="nav__link">About</a></li>
@@ -55,26 +58,25 @@
     <div class="hero__content">
       <div class="hero__badge reveal">
         <span class="badge__dot"></span>
-        Open to recruiter, tech, and growth opportunities
+        Open to frontend, software, and AI opportunities
       </div>
 
       <h1 class="hero__name reveal reveal--delay-1">
         <span class="hero__greeting">Hello, I'm</span>
-        <span class="hero__first">Karan</span>
-        <span class="hero__last">Rawat<span class="accent">.</span></span>
+        <span class="hero__nameplate">Karan Rawat</span>
+        <span class="hero__signature-line"></span>
       </h1>
 
       <p class="hero__tagline reveal reveal--delay-2">
-        Learning through
-        <span class="typed-wrap">
-          <span class="typed" id="typed"></span>
-          <span class="typed-cursor">|</span>
-        </span>
+        Real photos, real momentum, and a dark neon portfolio that feels more like my vibe.
       </p>
 
-      <p class="hero__sub reveal reveal--delay-3">
-        BCA Student at Graphic Era Hill University &nbsp;|&nbsp; Tech Recruiter background &nbsp;|&nbsp; Mathura, India
-      </p>
+      <div class="hero__sub reveal reveal--delay-3">
+        <span class="hero__sub-item">BCA Student, 2024-2027</span>
+        <span class="hero__sub-item">Graphic Era Hill University</span>
+        <span class="hero__sub-item">Dehradun, Uttarakhand</span>
+        <span class="hero__sub-item">Software and AI Direction</span>
+      </div>
 
       <div class="hero__cta reveal reveal--delay-4">
         <a href="#projects" class="btn btn--primary">See Real Projects</a>
@@ -88,47 +90,90 @@
     </div>
 
     <div class="hero__card reveal reveal--delay-3">
-      <div class="hero-card hero-card--profile">
-        <div class="hero-card__portrait">
+      <div class="hero-visual">
+        <div class="hero-visual__frame">
           <img
-            class="hero-card__photo"
-            src="https://avatars.githubusercontent.com/u/181270000?v=4"
-            alt="Portrait of Karan Rawat"
+            class="hero-visual__main-photo"
+            src="assets/photos/portrait-close.jpg"
+            alt="Close portrait of Karan Rawat"
           />
-        </div>
-        <div class="hero-card__top hero-card__top--stacked">
-          <div>
-            <p class="hero-card__eyebrow">Current Snapshot</p>
-            <p class="hero-card__name">Karan Rawat</p>
-            <p class="hero-card__role">Tech Recruiter and aspiring AI-first builder</p>
+          <div class="hero-visual__ring"></div>
+          <div class="hero-visual__caption">
+            <span class="hero-visual__caption-label">Main Portrait</span>
+            <span class="hero-visual__caption-text">A cleaner, more personal first impression.</span>
           </div>
         </div>
-        <p class="hero-card__summary">
-          I like technology that feels useful in the real world. Right now I am learning by building frontend projects, sharpening communication through recruiting experience, and moving closer to data, AI, and product-focused work.
-        </p>
-        <div class="hero-card__tags">
-          <span class="tag">Tech Hiring</span>
-          <span class="tag">Frontend</span>
-          <span class="tag">Vanilla JS</span>
-          <span class="tag">AI Journey</span>
+
+        <div class="hero-visual__float hero-visual__float--bike">
+          <img src="assets/photos/hero-bike.jpg" alt="Karan Rawat on a motorcycle" />
+          <span>Street energy</span>
         </div>
-        <div class="hero-card__stat">
-          <div class="stat-item">
-            <span class="stat-num">2+</span>
-            <span class="stat-label">Public Projects</span>
+
+        <div class="hero-visual__float hero-visual__float--hoodie">
+          <img src="assets/photos/hoodie-grass.jpg" alt="Karan Rawat in a hoodie outdoors" />
+          <span>Offbeat mood</span>
+        </div>
+
+        <div class="hero-card hero-card--profile">
+          <div class="hero-card__top hero-card__top--stacked">
+            <div>
+              <p class="hero-card__eyebrow">Current Snapshot</p>
+              <p class="hero-card__name">Karan Rawat</p>
+              <p class="hero-card__role">Frontend learner growing toward software engineering and AI</p>
+            </div>
           </div>
-          <div class="stat-item">
-            <span class="stat-num">1</span>
-            <span class="stat-label">Latest Role</span>
+          <p class="hero-card__summary">
+            My experience in data annotation and tech recruiting helped me build communication, quality focus, and better industry awareness. Right now, I am channeling that foundation into frontend development, stronger coding skills, and a long-term path in software and AI.
+          </p>
+          <div class="hero-card__tags">
+            <span class="tag">Frontend</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">AI Direction</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-num">24/7</span>
-            <span class="stat-label">Learning Mode</span>
+          <div class="hero-card__stat">
+            <div class="stat-item">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Public Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Work Stints</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">2024-27</span>
+              <span class="stat-label">BCA Session</span>
+            </div>
+          </div>
+          <div class="hero-card__links">
+            <a href="#about">Story</a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
-        <div class="hero-card__links">
-          <a href="#about">Story</a>
-          <a href="#contact">Contact</a>
+
+        <div class="neo-mascot">
+          <div class="neo-mascot__header">
+            <span class="neo-mascot__dot"></span>
+            Neon builder mode
+          </div>
+          <div class="neo-mascot__screen" aria-hidden="true">
+            <svg viewBox="0 0 220 180" class="neo-mascot__art" role="img">
+              <rect x="18" y="20" width="184" height="122" rx="18" fill="#0b1324"></rect>
+              <rect x="30" y="32" width="160" height="98" rx="14" fill="#101e39"></rect>
+              <circle cx="60" cy="60" r="16" fill="#ff67d6"></circle>
+              <rect x="92" y="46" width="52" height="12" rx="6" fill="#2ce6ff"></rect>
+              <rect x="92" y="66" width="72" height="8" rx="4" fill="#375780"></rect>
+              <rect x="48" y="98" width="92" height="12" rx="6" fill="#182b49"></rect>
+              <circle cx="94" cy="154" r="18" fill="#ff67d6"></circle>
+              <rect x="86" y="110" width="16" height="34" rx="8" fill="#ffd7c6"></rect>
+              <rect x="72" y="118" width="44" height="18" rx="9" fill="#7c5cff"></rect>
+              <rect x="74" y="132" width="16" height="26" rx="8" fill="#ffd7c6"></rect>
+              <rect x="98" y="132" width="16" height="26" rx="8" fill="#ffd7c6"></rect>
+              <rect x="130" y="112" width="34" height="20" rx="8" fill="#2ce6ff"></rect>
+              <rect x="42" y="146" width="136" height="10" rx="5" fill="#24385b"></rect>
+            </svg>
+          </div>
+          <p class="neo-mascot__quote">Code late. Glow soft. Keep building.</p>
         </div>
       </div>
     </div>
@@ -144,38 +189,38 @@
       <div class="about__grid">
         <div class="about__text">
           <h2 class="section-heading reveal">
-            Building a path through <em>people, products,</em><br />and practical tech
+            Building a path toward <em>software, AI,</em><br />and practical tech
           </h2>
           <p class="reveal reveal--delay-1">
-            I'm Karan Rawat, a BCA student at Graphic Era Hill University with a strong interest in technology, product thinking, and the kind of work that creates clear user value. I learn best by shipping, refining, and understanding how ideas become real experiences.
+            I'm Karan Rawat, a BCA student at Graphic Era Hill University, Dehradun, in the 2024-2027 session. I am most interested in frontend development, software engineering fundamentals, and the long-term path toward AI-focused technical work.
           </p>
           <p class="reveal reveal--delay-2">
-            My background is not only about code. Working close to hiring and communication has helped me understand people, roles, and how teams actually work. That perspective now shapes how I approach projects, growth, and the direction I want to take in AI and tech.
+            My background includes short professional stints in data annotation and US tech recruiting, but my real direction is on the technical side. Those roles helped me understand quality, communication, and industry expectations, while confirming that I want to grow as a builder in tech.
           </p>
 
           <div class="timeline reveal reveal--delay-3">
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <div class="timeline__body">
-                <span class="timeline__date">2024</span>
-                <h4 class="timeline__title">Data Annotator Trainee</h4>
-                <p class="timeline__desc">Worked with AI data workflows, labeling tasks, and quality-focused thinking that helped me better understand how intelligent systems are supported behind the scenes.</p>
+                <span class="timeline__date">Apr 2024 - Sep 2024</span>
+                <h4 class="timeline__title">Data Annotator at RMSI</h4>
+                <p class="timeline__desc">Worked on annotation, labeling, and data-quality workflows that gave me exposure to how AI systems are prepared, reviewed, and improved behind the scenes.</p>
               </div>
             </div>
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <div class="timeline__body">
-                <span class="timeline__date">Latest Role</span>
-                <h4 class="timeline__title">Tech Recruiter at Talentiqo</h4>
-                <p class="timeline__desc">Handled sourcing, outreach, and candidate communication while staying close to technical hiring requirements and the pace of real product teams.</p>
+                <span class="timeline__date">Jul 2025 - Jan 2026</span>
+                <h4 class="timeline__title">US Tech Recruiter at Talentiqo</h4>
+                <p class="timeline__desc">Handled sourcing, outreach, and candidate communication for US tech roles. That experience improved my understanding of technical hiring, but it also made my long-term goal clearer: I want to grow in tech itself.</p>
               </div>
             </div>
             <div class="timeline__item">
               <div class="timeline__dot"></div>
               <div class="timeline__body">
-                <span class="timeline__date">2023-Present</span>
+                <span class="timeline__date">2024 - 2027</span>
                 <h4 class="timeline__title">BCA at Graphic Era Hill University</h4>
-                <p class="timeline__desc">Growing my base in programming, problem solving, and computer fundamentals while building confidence through hands-on project work.</p>
+                <p class="timeline__desc">Building my base in programming, problem solving, and computer fundamentals while moving steadily toward frontend development, software engineering, and AI.</p>
               </div>
             </div>
           </div>
@@ -185,17 +230,17 @@
           <div class="info-card reveal reveal--delay-1">
             <i class="ph-bold ph-graduation-cap info-card__icon"></i>
             <h4>Education</h4>
-            <p>Bachelor of Computer Applications<br /><strong>Graphic Era Hill University</strong></p>
+            <p>Bachelor of Computer Applications<br /><strong>Graphic Era Hill University (2024-2027)</strong></p>
           </div>
           <div class="info-card reveal reveal--delay-2">
             <i class="ph-bold ph-target info-card__icon"></i>
             <h4>Current Focus</h4>
-            <p>Frontend projects, practical learning<br /><strong>AI and product growth</strong></p>
+            <p>Frontend projects and core programming<br /><strong>Software engineering and AI direction</strong></p>
           </div>
           <div class="info-card reveal reveal--delay-3">
             <i class="ph-bold ph-map-pin info-card__icon"></i>
             <h4>Location</h4>
-            <p>Mathura, Uttar Pradesh<br /><strong>India</strong></p>
+            <p>Dehradun, Uttarakhand<br /><strong>India</strong></p>
           </div>
           <div class="info-card reveal reveal--delay-4">
             <i class="ph-bold ph-heart info-card__icon"></i>
@@ -260,10 +305,10 @@
 
           <div class="skill-bar reveal reveal--delay-5">
             <div class="skill-bar__header">
-              <span class="skill-bar__name"><i class="ph-bold ph-briefcase"></i> Tech Recruiting</span>
-              <span class="skill-bar__pct">78%</span>
+              <span class="skill-bar__name"><i class="ph-bold ph-browser"></i> Frontend Projects</span>
+              <span class="skill-bar__pct">76%</span>
             </div>
-            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="78"></div></div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="76"></div></div>
           </div>
         </div>
 
@@ -289,12 +334,12 @@
             <span>Communication</span>
           </div>
           <div class="tech-card reveal reveal--delay-5">
-            <i class="ph-bold ph-magnifying-glass tech-card__icon"></i>
-            <span>Sourcing</span>
+            <i class="ph-bold ph-git-branch tech-card__icon"></i>
+            <span>Git and GitHub</span>
           </div>
           <div class="tech-card reveal reveal--delay-1">
             <i class="ph-bold ph-robot tech-card__icon"></i>
-            <span>AI Curiosity</span>
+            <span>AI Fundamentals</span>
           </div>
           <div class="tech-card reveal reveal--delay-2">
             <i class="ph-bold ph-tree-structure tech-card__icon"></i>
@@ -351,26 +396,26 @@
         <article class="project-card reveal reveal--delay-2">
           <div class="project-card__header">
             <div class="project-card__num">02</div>
-            <div class="project-card__status status--planning">Static UI Build</div>
+            <div class="project-card__status status--planning">In Progress</div>
           </div>
-          <p class="project-card__eyebrow">Simple visual commerce concept</p>
-          <h3 class="project-card__title">Thrift Swadeshi</h3>
+          <p class="project-card__eyebrow">Next stage of the journey</p>
+          <h3 class="project-card__title">More Technical Builds Coming Soon</h3>
           <p class="project-card__desc">
-            A small thrift-store website demo focused on clean layout, product presentation, and lightweight browsing. It reflects my hands-on approach to frontend experimentation and turning ideas into polished static experiences.
+            SkyBridgeAMS is currently the clearest public project on my profile. The next builds will go deeper into frontend execution, stronger JavaScript logic, and the kind of technical work that reflects where I want to grow next.
           </p>
           <div class="project-card__vision">
             <i class="ph-bold ph-sparkle"></i>
-            <span>Simple, visual, practical frontend execution</span>
+            <span>Focused on stronger software and AI-oriented project depth</span>
           </div>
           <div class="project-card__tags">
-            <span class="tag tag--tech">HTML</span>
-            <span class="tag tag--tech">CSS</span>
+            <span class="tag tag--tech">Frontend</span>
             <span class="tag tag--tech">JavaScript</span>
-            <span class="tag tag--tech">Storefront UI</span>
+            <span class="tag tag--tech">Python</span>
+            <span class="tag tag--tech">AI Direction</span>
           </div>
           <div class="project-card__footer">
-            <a href="https://github.com/karanrawat23/thrift-swadeshi" target="_blank" rel="noopener noreferrer" class="project-link">
-              <i class="ph-bold ph-github-logo"></i> View Repository
+            <a href="https://github.com/karanrawat23" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="ph-bold ph-github-logo"></i> Explore GitHub
             </a>
           </div>
         </article>
@@ -405,7 +450,7 @@
       <div class="contact__grid">
         <div class="contact__left reveal">
           <p class="contact__intro">
-            I am open to opportunities, collaborations, and meaningful conversations around tech, growth, recruiting, and building better digital experiences.
+            I am open to opportunities, collaborations, and meaningful conversations around frontend development, software engineering, AI, and building better digital experiences.
           </p>
 
           <div class="contact__methods">
@@ -463,11 +508,14 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="footer__logo">KR<span class="accent">.</span></span>
+      <span class="footer__logo">
+        <span class="footer__logo-main">Karan Rawat</span>
+        <span class="footer__logo-sub">Portfolio</span>
+      </span>
       <p class="footer__copy">&copy; <span id="currentYear">2026</span> Karan Rawat | Built with intent and vanilla code</p>
       <div class="footer__socials">
         <a href="https://github.com/karanrawat23" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ph-bold ph-github-logo"></i></a>
-        <a href="https://www.linkedin.com/in/karan-rawat-a9aba91a8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
+        <a href="https://www.linkedin.com/in/karan-rawat-515151281/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
         <a href="mailto:karanrawatxlk@gmail.com" aria-label="Email"><i class="ph-bold ph-envelope"></i></a>
       </div>
     </div>
