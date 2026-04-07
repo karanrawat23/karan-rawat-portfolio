@@ -1598,6 +1598,72 @@ body {
   text-shadow: 0 0 18px rgba(44,230,255,.06);
 }
 
+.hero__peek {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 22px;
+  flex-wrap: wrap;
+}
+
+.hero-peek__portrait {
+  width: 78px;
+  height: 78px;
+  padding: 4px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(44,230,255,.95), rgba(255,103,214,.85));
+  box-shadow: 0 14px 34px rgba(0,0,0,.24);
+}
+
+.hero-peek__portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero-peek__anime {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 14px 34px rgba(0,0,0,.18);
+}
+
+.hero-peek__anime-art {
+  width: 74px;
+  min-width: 74px;
+  padding: 6px;
+  border-radius: 18px;
+  background: rgba(8,12,28,.74);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.hero-peek__anime-svg {
+  display: block;
+  width: 100%;
+}
+
+.hero-peek__eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.hero-peek__text {
+  font-size: .88rem;
+  color: var(--text-secondary);
+  max-width: 22ch;
+}
+
 .hero__card {
   align-items: stretch;
 }
@@ -1833,6 +1899,10 @@ body {
 }
 
 @media (max-width: 960px) {
+  .hero__card {
+    order: -1;
+  }
+
   .hero-visual {
     min-height: unset;
     display: grid;
@@ -1868,6 +1938,14 @@ body {
 }
 
 @media (max-width: 580px) {
+  .hero__peek {
+    align-items: stretch;
+  }
+
+  .hero-peek__anime {
+    width: 100%;
+  }
+
   .hero-visual__frame {
     padding: 12px;
     border-radius: 24px;
