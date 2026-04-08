@@ -118,30 +118,59 @@ const secObs = new IntersectionObserver(entries => {
 document.querySelectorAll('section[id]').forEach(s => secObs.observe(s));
 
 /* ─── CONTACT FORM ───────────────────────────────────── */
-if (sendBtn) {
-  sendBtn.addEventListener('click', () => {
-    const name = $('name').value.trim();
-    const email = $('email').value.trim();
-    const msg = $('message').value.trim();
-    if (!name || !email || !msg) {
+const contactForm = $('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const name = formData.get('name').trim();
+    const email = formData.get('email').trim();
+    const message = formData.get('message').trim();
+
+    // Basic validation
+    if (!name || !email || !message) {
       formNote.style.color = 'var(--pink)';
       formNote.textContent = 'Please fill in all fields.';
       return;
     }
+
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       formNote.style.color = 'var(--pink)';
       formNote.textContent = 'Please enter a valid email address.';
       return;
     }
-    sendBtn.textContent = 'Sending…'; sendBtn.disabled = true;
-    setTimeout(() => {
-      formNote.style.color = 'var(--cyan)';
-      formNote.textContent = 'Message sent! I\'ll get back to you soon.';
-      $('name').value = $('email').value = $('message').value = '';
+
+    // Show loading state
+    sendBtn.textContent = 'Sending…';
+    sendBtn.disabled = true;
+    formNote.textContent = '';
+
+    try {
+      // Submit to Formspree (you'll need to replace YOUR_FORM_ID with actual ID)
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        formNote.style.color = 'var(--cyan)';
+        formNote.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+        contactForm.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      formNote.style.color = 'var(--pink)';
+      formNote.textContent = 'Failed to send message. Please try again or contact me directly via email.';
+    } finally {
       sendBtn.innerHTML = '<i class="ph-bold ph-paper-plane-tilt"></i> Send Message';
       sendBtn.disabled = false;
-      setTimeout(() => { formNote.textContent = ''; }, 5000);
-    }, 1400);
+    }
   });
 }
 

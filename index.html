@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karan Rawat - BCA student specializing in frontend development and AI. Building modern web applications with HTML, CSS, JavaScript, and Python." />
+  <meta name="keywords" content="frontend developer, web developer, JavaScript, HTML, CSS, AI, Dehradun, India" />
+  <meta name="author" content="Karan Rawat" />
+  <meta property="og:title" content="Karan Rawat — Frontend Developer & AI Learner" />
+  <meta property="og:description" content="Portfolio of Karan Rawat, BCA student building toward software engineering and AI" />
+  <meta property="og:image" content="https://karanrawat23.github.io/karan-rawat-portfolio/assets/photos/portrait-close.jpg" />
+  <meta property="og:url" content="https://karanrawat23.github.io/karan-rawat-portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <title>Karan Rawat — Frontend Developer & AI Learner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -108,7 +117,7 @@
 
         <!-- Bike card — actual photo -->
         <div class="photo-card photo-card--bike float-1">
-          <img src="assets/photos/hero-bike.jpg" alt="Karan on Royal Enfield" class="photo-card__img" />
+          <img src="assets/photos/hero-bike.jpg" alt="Karan Rawat riding his Royal Enfield motorcycle" class="photo-card__img" />
           <div class="photo-card__tag">
             <i class="ph-fill ph-motorcycle"></i> Street Energy
           </div>
@@ -310,9 +319,9 @@
             <span class="badge badge--live">Featured Build</span>
           </div>
           <p class="pcard__eyebrow">GitHub Profile Enhancement</p>
-          <h3 class="pcard__title">GitHub Page <span class="accent-text">....</span></h3>
+          <h3 class="pcard__title">GitHub Page <span class="accent-text">Lookmaxing</span></h3>
           <p class="pcard__desc">
-            Enhanced GitHub profile page with modern design, improved visual hierarchy, and optimized presentation. Focused on creating an attractive and professional online presence that showcases projects effectively.
+            Enhanced GitHub profile page with modern design, improved visual hierarchy, and optimized presentation. Created a custom README with dynamic content, contribution graphs, and project showcases to create an attractive and professional online presence.
           </p>
           <div class="pcard__what">
             <p class="pcard__what-label">What this shows</p>
@@ -345,7 +354,7 @@
           <p class="pcard__eyebrow">Sports & Entertainment</p>
           <h3 class="pcard__title">K2 <span class="accent-text">Cricket</span></h3>
           <p class="pcard__desc">
-            Cricket-focused web application featuring live scores, player statistics, match analysis, and interactive cricket content. Built with modern web technologies to deliver engaging sports experience.
+            Cricket-focused web application featuring live match scores, player statistics, team rankings, and interactive cricket content. Built with modern web technologies to deliver engaging sports experience with real-time data integration.
           </p>
           <div class="pcard__what">
             <p class="pcard__what-label">What this shows</p>
@@ -413,24 +422,26 @@
         </div>
 
         <div class="contact-form fade-up delay-2">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="Alex Johnson" />
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Alex Johnson" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="alex@example.com" required />
+              </div>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="alex@example.com" />
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Hey Karan, I'd love to connect about..." required></textarea>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Hey Karan, I'd love to connect about..."></textarea>
-          </div>
-          <button class="btn btn-primary btn-full" id="sendBtn">
-            <i class="ph-bold ph-paper-plane-tilt"></i> Send Message
-          </button>
-          <p class="form-note" id="formNote"></p>
+            <button type="submit" class="btn btn-primary btn-full" id="sendBtn">
+              <i class="ph-bold ph-paper-plane-tilt"></i> Send Message
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
         </div>
       </div>
     </div>
