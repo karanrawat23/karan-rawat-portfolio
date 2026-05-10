@@ -1,182 +1,265 @@
-/* ===================================================
-   KARAN RAWAT — PORTFOLIO v2
-   script.js
-=================================================== */
-
 const $ = id => document.getElementById(id);
-const cursor     = $('cursor');
-const cursorRing = $('cursorRing');
-const nav        = $('nav');
-const themeBtn   = $('themeToggle');
-const hamburger  = $('hamburger');
-const mobileMenu = $('mobileMenu');
-const backTop    = $('backTop');
-const typedEl    = $('typed');
-const sendBtn    = $('sendBtn');
-const formNote   = $('formNote');
-const yrEl       = $('yr');
 
-/* ─── YEAR ────────────────────────────────────────────── */
+const cursor = $("cursor");
+const cursorRing = $("cursorRing");
+const nav = $("nav");
+const themeBtn = $("themeToggle");
+const hamburger = $("hamburger");
+const mobileMenu = $("mobileMenu");
+const backTop = $("backTop");
+const typedEl = $("typed");
+const sendBtn = $("sendBtn");
+const formNote = $("formNote");
+const yrEl = $("yr");
+const contactForm = $("contactForm");
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(pointer: fine)").matches;
+
 if (yrEl) yrEl.textContent = new Date().getFullYear();
 
-/* ─── CUSTOM CURSOR ──────────────────────────────────── */
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.transform = `translate(${mx - 4}px,${my - 4}px)`;
-});
-(function ringLoop() {
-  rx += (mx - rx) * .13;
-  ry += (my - ry) * .13;
-  cursorRing.style.transform = `translate(${rx - 15}px,${ry - 15}px)`;
-  requestAnimationFrame(ringLoop);
-})();
-document.querySelectorAll('a,button,input,textarea,.pcard,.acard,.tech-tile').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursorRing.style.width = cursorRing.style.height = '48px'; cursorRing.style.opacity = '.22'; });
-  el.addEventListener('mouseleave', () => { cursorRing.style.width = cursorRing.style.height = '30px'; cursorRing.style.opacity = '.45'; });
-});
+if (cursor && cursorRing && finePointer && !prefersReducedMotion) {
+  let mx = 0;
+  let my = 0;
+  let rx = 0;
+  let ry = 0;
 
-/* ─── THEME ──────────────────────────────────────────── */
-const savedTheme = localStorage.getItem('kr-theme') || 'dark';
-document.documentElement.setAttribute('data-theme', savedTheme);
-themeBtn.addEventListener('click', () => {
-  const t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', t);
-  localStorage.setItem('kr-theme', t);
-});
-
-/* ─── NAV SCROLL ─────────────────────────────────────── */
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 30);
-  backTop.classList.toggle('visible', window.scrollY > 500);
-}, { passive: true });
-
-/* ─── HAMBURGER ──────────────────────────────────────── */
-hamburger.addEventListener('click', () => {
-  const open = hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => {
-  hamburger.classList.remove('open');
-  mobileMenu.classList.remove('open');
-  document.body.style.overflow = '';
-}));
-
-/* ─── BACK TO TOP ────────────────────────────────────── */
-backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-/* ─── SMOOTH SCROLL ──────────────────────────────────── */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (!t) return;
-    e.preventDefault();
-    window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
+  document.addEventListener("mousemove", event => {
+    mx = event.clientX;
+    my = event.clientY;
+    cursor.style.transform = `translate(${mx - 4}px,${my - 4}px)`;
   });
-});
 
-/* ─── SCROLL REVEAL ──────────────────────────────────── */
-const revObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: .1, rootMargin: '0px 0px -36px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => revObs.observe(el));
+  const ringLoop = () => {
+    rx += (mx - rx) * 0.13;
+    ry += (my - ry) * 0.13;
+    cursorRing.style.transform = `translate(${rx - 15}px,${ry - 15}px)`;
+    window.requestAnimationFrame(ringLoop);
+  };
 
-/* ─── SKILL BARS ─────────────────────────────────────── */
-const barObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      setTimeout(() => { e.target.style.width = e.target.dataset.w + '%'; }, 200);
-      barObs.unobserve(e.target);
-    }
+  ringLoop();
+
+  document.querySelectorAll("a, button, input, textarea, .pcard, .acard, .tech-tile").forEach(element => {
+    element.addEventListener("mouseenter", () => {
+      cursorRing.style.width = "48px";
+      cursorRing.style.height = "48px";
+      cursorRing.style.opacity = ".22";
+    });
+
+    element.addEventListener("mouseleave", () => {
+      cursorRing.style.width = "30px";
+      cursorRing.style.height = "30px";
+      cursorRing.style.opacity = ".45";
+    });
   });
-}, { threshold: .3 });
-document.querySelectorAll('.sbar__fill').forEach(f => barObs.observe(f));
-
-/* ─── TYPING EFFECT ──────────────────────────────────── */
-const phrases = ['software engineering', 'AI & data science', 'clean frontend work', 'practical tech'];
-let pi = 0, ci = 0, del = false;
-function type() {
-  const p = phrases[pi];
-  typedEl.textContent = p.slice(0, del ? --ci : ++ci);
-  if (!del && ci === p.length) { del = true; return setTimeout(type, 2000); }
-  if (del && ci === 0) { del = false; pi = (pi + 1) % phrases.length; return setTimeout(type, 400); }
-  setTimeout(type, del ? 38 : 72);
 }
-setTimeout(type, 1400);
 
-/* ─── ACTIVE NAV ─────────────────────────────────────── */
-const secObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      document.querySelectorAll('.nav__link').forEach(l => {
-        l.style.color = l.getAttribute('href') === `#${e.target.id}` ? 'var(--text)' : '';
-      });
-    }
+const savedTheme = localStorage.getItem("kr-theme") || "dark";
+document.documentElement.setAttribute("data-theme", savedTheme);
+
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("kr-theme", nextTheme);
   });
-}, { threshold: .35 });
-document.querySelectorAll('section[id]').forEach(s => secObs.observe(s));
+}
 
-/* ─── CONTACT FORM ───────────────────────────────────── */
-const contactForm = $('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+const handleScrollState = () => {
+  if (nav) nav.classList.toggle("scrolled", window.scrollY > 30);
+  if (backTop) backTop.classList.toggle("visible", window.scrollY > 500);
+};
+
+window.addEventListener("scroll", handleScrollState, { passive: true });
+handleScrollState();
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener("click", () => {
+    const open = hamburger.classList.toggle("open");
+    mobileMenu.classList.toggle("open", open);
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+
+  document.querySelectorAll(".mob-link").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("open");
+      mobileMenu.classList.remove("open");
+      document.body.style.overflow = "";
+    });
+  });
+}
+
+if (backTop) {
+  backTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", event => {
+    const target = document.querySelector(anchor.getAttribute("href"));
+    if (!target) return;
+
+    event.preventDefault();
+    window.scrollTo({
+      top: target.getBoundingClientRect().top + window.scrollY - 90,
+      behavior: prefersReducedMotion ? "auto" : "smooth"
+    });
+  });
+});
+
+const revealItems = document.querySelectorAll(".fade-up");
+
+if (prefersReducedMotion) {
+  revealItems.forEach(element => element.classList.add("visible"));
+} else {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -36px 0px" });
+
+  revealItems.forEach(element => revealObserver.observe(element));
+}
+
+const skillBars = document.querySelectorAll(".sbar__fill");
+
+if (prefersReducedMotion) {
+  skillBars.forEach(bar => {
+    bar.style.width = `${bar.dataset.w}%`;
+  });
+} else {
+  const barObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      window.setTimeout(() => {
+        entry.target.style.width = `${entry.target.dataset.w}%`;
+      }, 200);
+
+      barObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.3 });
+
+  skillBars.forEach(bar => barObserver.observe(bar));
+}
+
+const phrases = [
+  "software engineering",
+  "AI and data science",
+  "clean frontend work",
+  "practical tech"
+];
+
+if (typedEl) {
+  if (prefersReducedMotion) {
+    typedEl.textContent = phrases[0];
+  } else {
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    const type = () => {
+      const phrase = phrases[phraseIndex];
+      typedEl.textContent = phrase.slice(0, deleting ? --charIndex : ++charIndex);
+
+      if (!deleting && charIndex === phrase.length) {
+        deleting = true;
+        window.setTimeout(type, 1800);
+        return;
+      }
+
+      if (deleting && charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        window.setTimeout(type, 300);
+        return;
+      }
+
+      window.setTimeout(type, deleting ? 35 : 68);
+    };
+
+    window.setTimeout(type, 1200);
+  }
+}
+
+const observedSections = document.querySelectorAll("section[id]");
+
+if (observedSections.length) {
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      document.querySelectorAll(".nav__link").forEach(link => {
+        link.style.color = link.getAttribute("href") === `#${entry.target.id}` ? "var(--text)" : "";
+      });
+    });
+  }, { threshold: 0.35 });
+
+  observedSections.forEach(section => sectionObserver.observe(section));
+}
+
+if (contactForm && sendBtn && formNote) {
+  const formAction = contactForm.getAttribute("action") || "";
+  const formConfigured = !formAction.includes("YOUR_FORM_ID");
+
+  if (!formConfigured) {
+    formNote.style.color = "var(--text-3)";
+    formNote.textContent = "Contact form setup is pending. For now, please reach out directly by email.";
+  }
+
+  contactForm.addEventListener("submit", async event => {
+    event.preventDefault();
 
     const formData = new FormData(contactForm);
-    const name = formData.get('name').trim();
-    const email = formData.get('email').trim();
-    const message = formData.get('message').trim();
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
 
-    // Basic validation
     if (!name || !email || !message) {
-      formNote.style.color = 'var(--pink)';
-      formNote.textContent = 'Please fill in all fields.';
+      formNote.style.color = "var(--pink)";
+      formNote.textContent = "Please fill in all fields.";
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      formNote.style.color = 'var(--pink)';
-      formNote.textContent = 'Please enter a valid email address.';
+      formNote.style.color = "var(--pink)";
+      formNote.textContent = "Please enter a valid email address.";
       return;
     }
 
-    // Show loading state
-    sendBtn.textContent = 'Sending…';
+    if (!formConfigured) {
+      formNote.style.color = "var(--pink)";
+      formNote.textContent = "Formspree is not connected yet. Please email me directly at karanrawatxlk@gmail.com.";
+      return;
+    }
+
+    sendBtn.textContent = "Sending...";
     sendBtn.disabled = true;
-    formNote.textContent = '';
+    formNote.textContent = "";
 
     try {
-      // Submit to Formspree (you'll need to replace YOUR_FORM_ID with actual ID)
       const response = await fetch(contactForm.action, {
-        method: 'POST',
+        method: "POST",
         body: formData,
         headers: {
-          'Accept': 'application/json'
+          Accept: "application/json"
         }
       });
 
-      if (response.ok) {
-        formNote.style.color = 'var(--cyan)';
-        formNote.textContent = 'Message sent successfully! I\'ll get back to you soon.';
-        contactForm.reset();
-      } else {
-        throw new Error('Form submission failed');
-      }
+      if (!response.ok) throw new Error("Form submission failed");
+
+      formNote.style.color = "var(--cyan)";
+      formNote.textContent = "Message sent successfully. I'll get back to you soon.";
+      contactForm.reset();
     } catch (error) {
-      console.error('Form submission error:', error);
-      formNote.style.color = 'var(--pink)';
-      formNote.textContent = 'Failed to send message. Please try again or contact me directly via email.';
+      console.error("Form submission error:", error);
+      formNote.style.color = "var(--pink)";
+      formNote.textContent = "Failed to send message. Please try again later or contact me directly via email.";
     } finally {
       sendBtn.innerHTML = '<i class="ph-bold ph-paper-plane-tilt"></i> Send Message';
       sendBtn.disabled = false;
     }
   });
 }
-
-/* ─── INITIAL REVEAL ─────────────────────────────────── */
-window.addEventListener('load', () => {
-  document.querySelectorAll('.fade-up').forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
-  });
-});
