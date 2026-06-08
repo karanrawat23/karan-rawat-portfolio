@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Karan Rawat - BCA student focused on frontend development, software engineering foundations, and practical AI learning through real projects." />
-  <meta name="keywords" content="frontend developer, web developer, JavaScript, HTML, CSS, AI, Dehradun, India" />
+  <meta name="description" content="Karan Rawat - Full Stack Developer building animated interfaces, practical web products, and AI-ready digital experiences." />
+  <meta name="keywords" content="full stack developer, web developer, JavaScript, HTML, CSS, portfolio, AI, Dehradun, India" />
   <meta name="author" content="Karan Rawat" />
-  <meta property="og:title" content="Karan Rawat - Frontend Developer and AI Learner" />
-  <meta property="og:description" content="Portfolio of Karan Rawat, a BCA student building toward software engineering and AI through visible, practical work." />
+  <meta property="og:title" content="Karan Rawat - Full Stack Developer" />
+  <meta property="og:description" content="Portfolio of Karan Rawat, a full stack developer focused on bold interfaces, practical builds, and steady product growth." />
   <meta property="og:image" content="https://karanrawat23.github.io/karan-rawat-portfolio/assets/photos/portrait-close.jpg" />
   <meta property="og:url" content="https://karanrawat23.github.io/karan-rawat-portfolio" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <title>Karan Rawat - Frontend Developer and AI Learner</title>
+  <title>Karan Rawat - Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
@@ -23,6 +23,29 @@
 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
+  <section class="intro" id="intro" aria-label="Portfolio introduction">
+    <div class="intro__noise"></div>
+    <div class="intro__grid"></div>
+    <div class="intro__beam intro__beam--left"></div>
+    <div class="intro__beam intro__beam--right"></div>
+    <button class="intro__skip" id="introSkip" type="button">Skip Intro</button>
+
+    <div class="intro__content">
+      <p class="intro__eyebrow">Portfolio Intro</p>
+      <div class="intro__headline">
+        <span class="intro__line intro__line--lead">Hello, I'm</span>
+        <span class="intro__line intro__line--name">Karan Rawat</span>
+        <span class="intro__line intro__line--role">I'm a Full Stack Developer</span>
+      </div>
+      <p class="intro__sub">
+        I design, build, and animate digital experiences that feel sharp on every screen.
+      </p>
+      <div class="intro__wave" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
 
   <nav class="nav" id="nav">
     <a href="#hero" class="nav__logo">KR<span class="nav__dot">.</span></a>
@@ -62,7 +85,7 @@
     <div class="hero__left">
       <div class="hero__status fade-up">
         <span class="status__pulse"></span>
-        Open to internships, collaborations, and real-world learning.
+        Open to full stack internships, collaborations, and real-world builds.
       </div>
 
       <h1 class="hero__name fade-up delay-1">
@@ -71,18 +94,18 @@
       </h1>
 
       <p class="hero__tagline fade-up delay-2">
-        BCA student building toward <span class="highlight" id="typed"></span><span class="cursor-blink">|</span>
+        Full stack developer building for <span class="highlight" id="typed"></span><span class="cursor-blink">|</span>
       </p>
 
       <p class="hero__summary fade-up delay-3">
-        I like turning growing skills into visible work: clean interfaces, stronger project storytelling, and steady progress toward software engineering and AI.
+        I build expressive frontends, connect them with real functionality, and turn growing skills into portfolio work that feels polished, useful, and alive.
       </p>
 
       <div class="hero__chips fade-up delay-4">
         <span class="chip"><i class="ph-fill ph-map-pin"></i> Dehradun</span>
         <span class="chip"><i class="ph-fill ph-graduation-cap"></i> BCA 2024-27</span>
-        <span class="chip"><i class="ph-fill ph-code"></i> Frontend Foundations</span>
-        <span class="chip chip--glow"><i class="ph-fill ph-robot"></i> AI Direction</span>
+        <span class="chip"><i class="ph-fill ph-code"></i> Full Stack Builds</span>
+        <span class="chip chip--glow"><i class="ph-fill ph-sparkle"></i> Motion-First UI</span>
       </div>
 
       <div class="hero__cta fade-up delay-5">
@@ -99,14 +122,14 @@
 
       <div class="hero__proof fade-up delay-5">
         <article class="proof-card">
-          <span class="proof-card__label">Profile Snapshot</span>
-          <strong class="proof-card__value">2 roles that shaped my perspective</strong>
-          <span class="proof-card__meta">Data annotation and tech recruiting gave me a practical view of AI and engineering.</span>
+          <span class="proof-card__label">Current Role</span>
+          <strong class="proof-card__value">Full Stack Developer with product-minded energy</strong>
+          <span class="proof-card__meta">I focus on interface quality, working logic, and experiences that feel complete from screen to system.</span>
         </article>
         <article class="proof-card">
           <span class="proof-card__label">How I work</span>
-          <strong class="proof-card__value">Build in public, improve in cycles</strong>
-          <span class="proof-card__meta">Each project is a step toward cleaner code, better UI, and stronger problem solving.</span>
+          <strong class="proof-card__value">Build fast, refine deeply</strong>
+          <span class="proof-card__meta">Each project is a cycle of shipping, polishing motion, and improving the product story behind the code.</span>
         </article>
       </div>
     </div>
@@ -114,9 +137,9 @@
     <div class="hero__right fade-up delay-2">
       <div class="photo-stack">
         <div class="photo-frame photo-frame--main">
-          <img src="assets/photos/portrait-close.jpg" alt="Karan Rawat - Frontend Developer and AI Learner" class="photo-main" />
+          <img src="assets/photos/portrait-close.jpg" alt="Karan Rawat - Full Stack Developer" class="photo-main" />
           <div class="photo-label">
-            <i class="ph-bold ph-user"></i> Main Portrait
+            <i class="ph-bold ph-user"></i> Full Stack Developer
           </div>
           <div class="photo-ring"></div>
         </div>
@@ -133,7 +156,7 @@
             <div class="info-float__avatar">KR</div>
             <div>
               <p class="info-float__name">Karan Rawat</p>
-              <p class="info-float__role">Frontend and AI Learner</p>
+              <p class="info-float__role">Full Stack Developer</p>
             </div>
           </div>
           <div class="info-float__stats">
@@ -169,12 +192,12 @@
   <section class="section about" id="about">
     <div class="container">
       <div class="section-tag fade-up"><span>01</span> About Me</div>
-      <h2 class="section-title fade-up delay-1">Building a path toward <em>software, AI,</em><br/>and practical tech</h2>
+      <h2 class="section-title fade-up delay-1">Building full stack products with <em>software, AI,</em><br/>and practical craft</h2>
 
       <div class="about-grid">
         <div class="about-text">
           <p class="fade-up delay-1">
-            I'm a BCA student at Graphic Era Hill University, Dehradun, focused on frontend development, software engineering foundations, and a long-term path toward AI-focused work.
+            I'm a BCA student at Graphic Era Hill University, Dehradun, growing as a full stack developer through frontend polish, real functionality, and a long-term path toward AI-focused work.
           </p>
           <p class="fade-up delay-2">
             Before diving full-time into tech, I worked as a Data Annotator at RMSI and a US Tech Recruiter at Talentiqo. Those roles gave me real perspective on how AI pipelines are built, what strong engineering profiles look like, and what separates good engineers from the rest.
@@ -209,7 +232,7 @@
               <div class="tl-body">
                 <span class="tl-date">2024 - 2027 · Ongoing</span>
                 <h4>BCA · Graphic Era Hill University</h4>
-                <p>Building programming foundations, problem solving habits, and the consistency needed to grow toward frontend, software engineering, and AI.</p>
+                <p>Building programming foundations, problem solving habits, and the consistency needed to grow toward full stack engineering and AI.</p>
               </div>
             </div>
           </div>
@@ -224,7 +247,7 @@
           <div class="acard fade-up delay-2">
             <i class="ph-bold ph-target acard__icon"></i>
             <h4>Current Focus</h4>
-            <p>Frontend projects, core JS<br/><strong>Software engineering and AI direction</strong></p>
+            <p>Full stack projects, core JS<br/><strong>Software engineering and AI direction</strong></p>
           </div>
           <div class="acard fade-up delay-3">
             <i class="ph-bold ph-map-pin acard__icon"></i>
@@ -321,7 +344,7 @@
           </div>
           <div class="rm-item">
             <span class="rm-check"></span>
-            <span>Moving from frontend basics toward practical Python and AI projects</span>
+            <span>Turning frontend strength into fuller stack builds with Python, APIs, and AI projects</span>
           </div>
         </div>
       </div>

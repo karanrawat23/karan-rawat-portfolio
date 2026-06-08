@@ -2,6 +2,8 @@ const $ = id => document.getElementById(id);
 
 const cursor = $("cursor");
 const cursorRing = $("cursorRing");
+const intro = $("intro");
+const introSkip = $("introSkip");
 const nav = $("nav");
 const themeBtn = $("themeToggle");
 const hamburger = $("hamburger");
@@ -15,6 +17,32 @@ const contactForm = $("contactForm");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const finePointer = window.matchMedia("(pointer: fine)").matches;
+
+if (intro) {
+  let introClosed = false;
+
+  const finishIntro = immediate => {
+    if (introClosed) return;
+    introClosed = true;
+    intro.classList.add(immediate ? "intro--hidden" : "intro--exit");
+    document.body.classList.remove("intro-lock");
+
+    window.setTimeout(() => {
+      intro.style.display = "none";
+    }, immediate ? 60 : 720);
+  };
+
+  if (prefersReducedMotion) {
+    finishIntro(true);
+  } else {
+    document.body.classList.add("intro-lock");
+    window.setTimeout(() => finishIntro(false), 4200);
+
+    if (introSkip) {
+      introSkip.addEventListener("click", () => finishIntro(false), { once: true });
+    }
+  }
+}
 
 if (yrEl) yrEl.textContent = new Date().getFullYear();
 
@@ -146,10 +174,10 @@ if (prefersReducedMotion) {
 }
 
 const phrases = [
-  "software engineering",
-  "AI and data science",
-  "clean frontend work",
-  "practical tech"
+  "full stack products",
+  "animated web experiences",
+  "clean UI and real logic",
+  "creative digital builds"
 ];
 
 if (typedEl) {
