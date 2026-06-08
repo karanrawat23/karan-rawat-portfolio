@@ -82,6 +82,25 @@ if (cursor && cursorRing && finePointer && !prefersReducedMotion) {
   });
 }
 
+const spotlightSurfaces = document.querySelectorAll(
+  ".proof-card, .signal-card, .about-panel, .acard, .tech-tile, .roadmap, .pcard, .cmethod, .contact-form"
+);
+
+spotlightSurfaces.forEach(surface => {
+  surface.style.setProperty("--spot-x", "50%");
+  surface.style.setProperty("--spot-y", "50%");
+});
+
+if (finePointer && !prefersReducedMotion) {
+  spotlightSurfaces.forEach(surface => {
+    surface.addEventListener("pointermove", event => {
+      const rect = surface.getBoundingClientRect();
+      surface.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
+      surface.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
+    });
+  });
+}
+
 const savedTheme = localStorage.getItem("kr-theme") || "dark";
 document.documentElement.setAttribute("data-theme", savedTheme);
 
