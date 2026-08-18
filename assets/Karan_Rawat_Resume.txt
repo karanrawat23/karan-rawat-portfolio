@@ -1,0 +1,23 @@
+Karan Rawat
+Full Stack Developer
+
+Focus
+- Building polished, interactive web experiences with strong visual identity and thoughtful UX.
+- Bridging frontend craft with practical product thinking and real-world build quality.
+- Growing toward full-stack engineering, AI-aware product work, and high-quality digital products.
+
+Skills
+- HTML, CSS, JavaScript
+- UI/UX polish and modern frontend patterns
+- Git, GitHub, responsive web design
+- Product-minded development and clear communication
+
+Experience Highlights
+- Designed and shipped portfolio-focused interactive web experiences.
+- Built product-style frontend interfaces with premium motion and editorial feel.
+- Worked across AI-adjacent workflows and communication-driven roles that sharpened product perspective.
+
+Contact
+karanrawatxlk@gmail.com
+https://github.com/karanrawat23
+https://www.linkedin.com/in/karan-rawat-515151281/
