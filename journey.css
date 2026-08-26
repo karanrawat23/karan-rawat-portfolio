@@ -1,0 +1,33 @@
+.timeline h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.journey-logo {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 34px;
+  padding: 4px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(23, 34, 30, .14);
+}
+
+.journey-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.journey-logo--gehu { padding: 2px; }
+.journey-logo--talentiqo { background: #fff; }
+.journey-logo--rmsi { background: #fff; }
+
+@media (max-width: 740px) {
+  .journey-logo { width: 38px; height: 31px; }
+}
