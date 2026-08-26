@@ -2,6 +2,10 @@
 
 A modern personal portfolio website built with HTML, CSS, and vanilla JavaScript.
 
+## 🌐 Visit the live portfolio
+
+[**karanrawat23.github.io/karan-rawat-portfolio**](https://karanrawat23.github.io/karan-rawat-portfolio/)
+
 ## 🚀 Live Website
 
 **https://karanrawat23.github.io/karan-rawat-portfolio/**
