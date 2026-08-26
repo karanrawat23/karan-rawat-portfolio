@@ -1,0 +1,12 @@
+.skill-groups span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.skill-groups span img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
